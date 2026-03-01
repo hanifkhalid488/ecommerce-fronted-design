@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Accessories - Product Listing</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#f6f7f9;
+  color:#222;
+}
+
+.header{
+  width:100%;
+  background:white;
+  border-bottom:1px solid #ddd;
+}
+
+/* HEADER TOP */
+.header-top{
+  width:100%;      /* full width */
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 20px;
+  border-bottom:1px solid #ddd; 
+}
+
+
+/* LOGO */
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  font-weight:bold;
+  color:#2a7be4;
+}
+
+.logo img{
+  width:30px;
+}
+
+/* SEARCH */
+.search-container{
+  display:flex;
+}
+
+.search-container input{
+  padding:8px;
+  width:350px;
+  border:1px solid #ccc;
+  border-right:none;
+}
+
+.search-container select{
+  padding:8px;
+  border:1px solid #ccc;
+}
+
+.search-container button{
+  background:#2a7be4;
+  color:white;
+  border:none;
+  padding:8px 15px;
+  cursor:pointer;
+}
+
+/* HEADER ICONS */
+.header-icons{
+  display:flex;
+  gap:20px;
+}
+
+.header-icons a{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-decoration:none;
+  color:#000;
+  font-size:14px;
+}
+
+.header-icons a:hover{
+  color:#007bff;
+}
+
+/* ================= SECOND NAVBAR ================= */
+
+.header-bottom{
+  width:100%;           /* full width */
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 20px;
+  border-bottom:1px solid #ddd;
+}
+
+
+.header-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  max-width:1180px;
+  margin:0 auto;
+  padding:10px 0;
+}
+
+/* LEFT MENU */
+.menu-left{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.menu-left > a{
+  text-decoration:none;
+  color:#333;
+  font-size:14px;
+  padding:6px 10px;
+  border-radius:4px;
+}
+
+.menu-left > a:hover{
+  background:#e0e0e0;
+}
+
+/* All Categories */
+.all-categories{
+  position:relative;
+}
+
+.categories-link{
+  padding:8px 12px;
+  background:#2a7be4;
+  color:white;
+  text-decoration:none;
+  border-radius:4px;
+  font-size:14px;
+}
+
+.categories-link:hover{
+  background:#1a5fc1;
+}
+
+/* DROPDOWN */
+.side-menu{
+  position:absolute;
+  top:110%;
+  left:0;
+  width:220px;
+  background:#fff;
+  border:1px solid #ddd;
+  box-shadow:0 4px 8px rgba(0,0,0,0.1);
+  display:none;
+  flex-direction:column;
+  z-index:1000;
+}
+
+.all-categories:hover .side-menu{
+  display:flex;
+}
+
+.side-menu a{
+  padding:10px 15px;
+  text-decoration:none;
+  color:#333;
+  font-size:14px;
+}
+
+.side-menu a:hover{
+  background:#f0f0f0;
+}
+
+/* RIGHT MENU */
+.menu-right{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.menu-right select{
+  padding:6px 10px;
+  font-size:14px;
+  border:1px solid #ccc;
+  border-radius:4px;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer{
+background:#f8f8f8;
+font-family:Arial, sans-serif;
+}
+
+/* TOP AREA */
+
+.footer-top{
+width:85%;
+margin:auto;
+padding:40px 0;
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+gap:40px;
+}
+
+/* BRAND SECTION */
+
+.footer-brand{
+max-width:260px; /* text 2 line control */
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:8px;
+text-decoration:none;
+color:#000;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.footer-text{
+color:#666;
+line-height:1.5;
+}
+
+/* SOCIAL ICONS */
+
+.social-icons{
+margin-top:15px;
+}
+
+.social-icons a{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+width:34px;
+height:34px;
+background:#e5e5e5;
+border-radius:50%;
+margin-right:8px;
+color:#555;
+text-decoration:none;
+font-size:14px;
+}
+
+/* LINKS SECTION */
+
+.footer-links{
+display:flex;
+gap:60px;
+}
+
+.footer-links h4{
+margin-bottom:10px;
+}
+
+.footer-links a{
+display:block;
+text-decoration:none;
+color:#666;
+margin-bottom:6px;
+font-size:14px;
+}
+
+/* APP DOWNLOAD */
+
+.footer-app{
+display:flex;
+flex-direction:column;
+}
+
+.footer-app h4{
+margin-bottom:5px;
+}
+
+.footer-app{
+display:flex;
+flex-direction:column;
+gap:8px;   /* images ka controlled gap */
+}
+
+.footer-app img{
+width:140px;
+display:block;
+margin:0;   /* extra gap remove */
+}
+
+
+/* BOTTOM BAR */
+
+.footer-bottom{
+border-top:1px solid #ddd;
+padding:15px 7.5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:14px;
+color:#666;
+}
+
+.footer-lang {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 107px;     /* total width */
+  height: 24px;     /* total height */
+  padding: 0 5px;   /* optional, thoda space inside */
+  box-sizing: border-box; 
+}
+
+.footer-lang img {
+  width: 20px;      /* flag width */
+  height: 24px;     /* flag height same as container */
+  object-fit: cover; /* image properly fit ho jaye without distortion */
+}
+
+.footer-lang span {
+  font-size: 14px;   /* text size adjust kar sakte ho */
+  line-height: 24px; /* vertically center text */
+}
+
+/* Product Section CSS */
+.product-page {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.sidebar h3 { margin-top:0; margin-bottom:15px; }
+.sidebar ul { list-style:none; padding:0; margin:0; }
+.sidebar li { margin-bottom:10px; }
+.sidebar a { text-decoration:none; color:#333; }
+
+/* Products Grid */
+.products {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+.product-card:hover { transform: translateY(-5px); }
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.product-card h4 { margin:5px 0; font-size:16px; }
+.product-card .price { color:#e53935; font-weight:bold; margin-bottom:5px; }
+.product-card .rating { color:#ffb400; margin-bottom:10px; }
+.product-card .shipping { font-size:12px; color:#777; margin-bottom:10px; }
+.product-card button {
+  background:#007bff; color:#fff; border:none; padding:10px; border-radius:6px; cursor:pointer; font-size:14px;
+}
+.product-card button:hover { background:#0056b3; }
+
+/* Responsive */
+@media(max-width:992px){
+  .product-page { flex-direction: column; }
+  .sidebar { width:100%; }
+}
+
+
+  </style>
+</head>
+<body>
+
+    <header class="header">
+
+    <!-- TOP HEADER -->
+
+    <div class="header-top">
+
+      <!-- LOGO -->
+      <a href="#" class="logo">
+        <img src="images/logo.png" alt="logo">
+        <span>Brand</span>
+      </a>
+
+      <!-- SEARCH BAR -->
+
+      <div class="search-container">
+
+        <input type="text" placeholder="Search">
+
+        <select>
+          <option>All Categories</option>
+          <option>Automobiles</option>
+          <option>Clothes & Wear</option>
+          <option>Computer & Tech</option>
+          <option>Tools & Equipment</option>
+          <option>Sports & Outdoor</option>
+          <option>Animals & Pets</option>
+          <option>Machinery & Tools</option>
+          <option>More Categories</option>
+        </select>
+
+        <button>Search</button>
+
+      </div>
+
+      <!-- RIGHT ICONS -->
+
+      <div class="header-icons">
+        <a href="#">&#128100;<br>Profile</a> <!-- 👤 -->
+        <a href="#">&#128172;<br>Message</a> <!-- 💬 -->
+        <a href="#">&#128230;<br>Orders</a> <!-- 📦 -->
+        <a href="#">&#128722;<br>My cart</a> <!-- 🛒 -->
+      </div>
+
+
+    </div>
+
+
+    <!-- SECOND NAV BAR -->
+    <header>
+      <div class="header-bottom">
+        <!-- LEFT MENU -->
+        <div class="menu-left">
+          <div class="all-categories">
+            <a href="#" class="categories-link">All Categories</a>
+            <div class="side-menu">
+              <div class="user-section">
+                <div class="user-pic"></div>
+                <span>Sign in | Register</span>
+              </div>
+              <a href="#"><i class="icon-home"></i> Home</a>
+              <a href="#"><i class="icon-list"></i> Categories</a>
+              <a href="#"><i class="icon-heart"></i> Favorites</a>
+              <a href="#"><i class="icon-bag"></i> My orders</a>
+              <a href="#"><i class="icon-globe"></i> English | USD</a>
+              <a href="#"><i class="icon-headset"></i> Contact us</a>
+              <a href="#"><i class="icon-info"></i> About</a>
+              <hr>
+              <a href="#">User agreement</a>
+              <a href="#">Partnership</a>
+              <a href="#">Privacy policy</a>
+            </div>
+          </div>
+          <a href="#">Hot offers</a>
+          <a href="#">Gift boxes</a>
+          <a href="#">Projects</a>
+          <a href="#">Menu item</a>
+          <a href="#">Help</a>
+        </div>
+
+        <!-- RIGHT MENU -->
+        <div class="menu-right">
+          <select>
+            <option>English, USD</option>
+            <option>Urdu, PKR</option>
+            <option>French, EUR</option>
+          </select>
+
+          <label for="ship-to">Ship to</label>
+          <select id="ship-to">
+            <option value="pakistan">Pakistan 🇵🇰</option>
+            <option value="usa">USA 🇺🇸</option>
+            <option value="canada">Canada 🇨🇦</option>
+            <option value="uk">UK 🇬🇧</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+  <!-- Main product page -->
+  <div class="product-page">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#">Mobile Cases</a></li>
+        <li><a href="#">Chargers</a></li>
+        <li><a href="#">Earphones</a></li>
+        <li><a href="#">Screen Protectors</a></li>
+        <li><a href="#">Power Banks</a></li>
+      </ul>
+
+      <h3>Brands</h3>
+      <ul>
+        <li><a href="#">Apple</a></li>
+        <li><a href="#">Samsung</a></li>
+        <li><a href="#">Xiaomi</a></li>
+        <li><a href="#">OnePlus</a></li>
+        <li><a href="#">Others</a></li>
+      </ul>
+
+      <h3>Price</h3>
+      <ul>
+        <li><a href="#">$0 - $20</a></li>
+        <li><a href="#">$21 - $50</a></li>
+        <li><a href="#">$51 - $100</a></li>
+        <li><a href="#">$101+</a></li>
+      </ul>
+    </aside>
+
+    <!-- Products -->
+    <section class="products">
+      <!-- Product Cards -->
+      <div class="product-card">
+        <img src="/Images/wallet.png" alt="iPhone 14 Case">
+        <h4>iPhone 14 Case</h4>
+        <div class="price">$19.99</div>
+        <div class="rating">★★★★☆</div>
+        <div class="shipping">Free shipping</div>
+        <button>View Details</button>
+      </div>
+
+      <div class="product-card">
+        <img src="/Images/watch.png" alt="Fast Charger">
+        <h4>Fast Charger 20W</h4>
+        <div class="price">$25.99</div>
+        <div class="rating">★★★☆☆</div>
+        <div class="shipping">Ships in 2 days</div>
+        <button>View Details</button>
+      </div>
+
+      <div class="product-card">
+        <img src="/Images/shirt.png" alt="Wireless Earphones">
+        <h4>Wireless Earphones</h4>
+        <div class="price">$45.50</div>
+        <div class="rating">★★★★★</div>
+        <div class="shipping">Free shipping</div>
+        <button>View Details</button>
+      </div>
+
+      <div class="product-card">
+        <img src="/Images/jacket.png" alt="Power Bank">
+        <h4>10000mAh Power Bank</h4>
+        <div class="price">$29.99</div>
+        <div class="rating">★★★★☆</div>
+        <div class="shipping">Ships in 3 days</div>
+        <button>View Details</button>
+      </div>
+
+      <div class="product-card">
+        <img src="/Images/shirt.png" alt="Screen Protector">
+        <h4>Tempered Glass Screen Protector</h4>
+        <div class="price">$12.99</div>
+        <div class="rating">★★★★☆</div>
+        <div class="shipping">Free shipping</div>
+        <button>View Details</button>
+      </div>
+
+      <div class="product-card">
+        <img src="/Images/camera.png" alt="Fast Charger 30W">
+        <h4>Fast Charger 30W</h4>
+        <div class="price">$35.99</div>
+        <div class="rating">★★★★★</div>
+        <div class="shipping">Ships in 1 day</div>
+        <button>View Details</button>
+      </div>
+
+      <div class="product-card">
+        <img src="/Images/pent.png" alt="Bluetooth Earphones">
+        <h4>Bluetooth Earphones</h4>
+        <div class="price">$39.50</div>
+        <div class="rating">★★★☆☆</div>
+        <div class="shipping">Free shipping</div>
+        <button>View Details</button>
+      </div>
+
+      <div class="product-card">
+        <img src="/Images/matres.png" alt="Samsung Case">
+        <h4>Samsung Galaxy Case</h4>
+        <div class="price">$17.99</div>
+        <div class="rating">★★★★☆</div>
+        <div class="shipping">Ships in 2 days</div>
+        <button>View Details</button>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- Footer from homepage -->
+ <footer class="footer">
+
+      <div class="footer-top">
+
+        <!-- LEFT SIDE BRAND -->
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+
+            <img src="images/logo.png" alt="logo">
+            <span>Brand</span>
+
+          </a>
+
+          <p class="footer-text">
+            Best information about the company goes here but now lorem ipsum is
+          </p>
+
+
+          <div class="social-icons">
+
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+
+          </div>
+
+
+        </div>
+
+        <!-- LINKS -->
+
+        <div class="footer-links">
+
+          <div>
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Find store</a>
+            <a href="#">Categories</a>
+            <a href="#">Blogs</a>
+          </div>
+
+          <div>
+            <h4>Partnership</h4>
+            <a href="#">About Us</a>
+            <a href="#">Find store</a>
+            <a href="#">Categories</a>
+            <a href="#">Blogs</a>
+          </div>
+
+          <div>
+            <h4>Information</h4>
+            <a href="#">Help Center</a>
+            <a href="#">Money Refund</a>
+            <a href="#">Shipping</a>
+            <a href="#">Contact us</a>
+          </div>
+
+          <div>
+            <h4>For users</h4>
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+            <a href="#">Settings</a>
+            <a href="#">My Orders</a>
+          </div>
+
+        </div>
+
+        <!-- APP DOWNLOAD -->
+
+        <div class="footer-app">
+
+          <h4>Get app</h4>
+
+          <img src="images/appstore.png" alt="appstore">
+          <img src="images/googlestore.webp" alt="googleplay">
+
+        </div>
+
+      </div>
+
+      <!-- BOTTOM BAR -->
+
+      <div class="footer-bottom">
+
+        <p>© 2023 Ecommerce.</p>
+
+        <div class="footer-lang">
+          <img src="images/usa.png" width="20">
+          <span>Eng</span>
+        </div>
+
+      </div>
+
+    </footer>
+
+</body>
+</html>
