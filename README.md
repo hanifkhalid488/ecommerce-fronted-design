@@ -1,25 +1,25 @@
-# Ecommerce Website Project
+# 🛒 Ecommerce Website Project
 
 ## 📌 Overview
-This project is developed as part of an internship at Developer Hub.  
-It is a modern Ecommerce website built using HTML and CSS, focusing on layout design, responsive structure, and clean UI implementation.
+This Ecommerce Website is a modern frontend project developed as part of a Frontend Internship at Developer Hub.
 
-The project is being developed with weekly updates and improvements.
+The website focuses on clean UI design, structured layout, and responsive implementation using core frontend technologies. It represents a complete homepage design of a real-world ecommerce platform.
 
 ---
 
 ## 🚀 Features
 
-- Header with navigation and search bar
-- Hero section with categories and banner
-- Deals and offers section
+- Responsive Header with navigation and search bar
+- Hero Section with category sidebar and promotional banner
+- Deals & Offers section with countdown timer
 - Product category blocks
-- Supplier inquiry form
-- Recommended items grid
+- Supplier inquiry form with validation
+- Recommended products grid layout
 - Extra services section
-- Suppliers by region
-- Newsletter subscription
-- Footer with social links
+- Suppliers by region section
+- Newsletter subscription with validation
+- Structured footer with social media links
+- Interactive JavaScript features
 
 ---
 
@@ -27,27 +27,18 @@ The project is being developed with weekly updates and improvements.
 
 - HTML5
 - CSS3
+- JavaScript (Vanilla JS)
+  
+## 🎯 Project Goals
 
----
+The main objectives of this project were:
 
-## 📅 Development Process
+- Practice semantic HTML structure
+- Implement modern CSS layout techniques (Flexbox & responsive design)
+- Build a real-world ecommerce UI layout
+- Add basic interactivity using JavaScript
+- Improve frontend development skills through practical implementation
 
-This project is updated weekly as part of internship tasks:
-
-- Week 1: Layout structure and main homepage design
-
----
-
-## 🎯 Purpose
-
-The goal of this project is to improve frontend development skills including:
-
-- Semantic HTML structure
-- CSS layout design
-- Flexbox and responsive design
-- Real-world ecommerce UI practice
-
----
 
 ---
 
